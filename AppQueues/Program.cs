@@ -2,9 +2,10 @@
 using Azure.Storage.Queues;
 using System.Text;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello, Function Queue teste!");
 
-string _connection = "DefaultEndpointsProtocol=https;AccountName=storage2fna;AccountKey=qCzXhvFqhbUxcBfCdmc0HME45ZhUz+gNujCa/a6gYmg/nAwJFJOa0NyrBXY1uS64UxK0+1mfylkk5zQova/x/g==;EndpointSuffix=core.windows.net";
+// To do: Inserir string de conexão azure storage para testes 
+string _connection = "";
 
 // Instantiate a QueueClient which will be used to create and manipulate the queue
 
