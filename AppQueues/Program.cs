@@ -2,7 +2,7 @@
 using Azure.Storage.Queues;
 using System.Text;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello, Queue.!");
 
 string _connection = "DefaultEndpointsProtocol=https;AccountName=storage2fna;AccountKey=qCzXhvFqhbUxcBfCdmc0HME45ZhUz+gNujCa/a6gYmg/nAwJFJOa0NyrBXY1uS64UxK0+1mfylkk5zQova/x/g==;EndpointSuffix=core.windows.net";
 
@@ -22,7 +22,7 @@ queueClient.CreateIfNotExists();
 if (queueClient.Exists())
 {
     // Send a message to the queue
-    queueClient.SendMessage("{ msg: 'Fabricio' }");
+    queueClient.SendMessage("{ msg: 'Fabricio 2' }");
 }
 
 Console.WriteLine("Mensagem enviada para a fila.");

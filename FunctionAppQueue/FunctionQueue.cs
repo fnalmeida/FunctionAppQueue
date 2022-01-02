@@ -21,12 +21,14 @@ namespace FunctionAppQueue
             log.LogInformation($" Queue trigger function iniciada para: {myQueueItem}");
 
             var data = JsonConvert.DeserializeObject<Teste>(myQueueItem);
-            data.RowKey = new Guid().ToString();
+            data.PartitionKey = "teste";
+            data.RowKey = Guid.NewGuid().ToString();
 
             log.LogInformation($" Inserindo da CloudTable Teste ");
 
             var tableOperation = TableOperation.Insert(data);
-            cloudTableTeste.ExecuteAsync(tableOperation);
+            var result = cloudTableTeste.Execute(tableOperation);
+            
 
             log.LogInformation($" {myQueueItem} Gravado em tabela.");
 
